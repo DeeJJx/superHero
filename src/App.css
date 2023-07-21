@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1a1a1a, #292929);
+  color: #fff;
+}
+@media only screen and (max-width: 768px) {
+  .hero-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 768px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .hero-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1440px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+  }
+}
+
+.hero-card {
+  text-align: center;
+  border: 2px solid black;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+  grid-row: auto / span 1;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.hero-card:hover {
+  transform: translateY(-5px);
+}
+
+.hero-card.expanded {
+  grid-row: auto / span 2;
+}
+
+.App form {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.App form button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.App form button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hero-image {
+  width: 100%;
+  object-fit: cover;
+
+  border-radius: 5px;
+}
+
+.hero-card p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.hero-card button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+  outline: none;
+  width: 100%;
+}
+
+.hero-card .hero-image {
+  object-fit: cover;
+  width: 100%;
+}
+
+.hero-search .hero-image {
+  max-width: 350px;
+}
+.hero-search .hero-card {
+  max-width: 350px;
+}
+
+nav {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  color: #fff;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 20px;
+}
+
+nav a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+.hero-card .biography {
+  padding: 1rem;
+}
+
+.page.hero-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.hero-search-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 150px;
+  justify-content: space-evenly;
+}
+
+.hero-search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  outline: none;
+  max-width: 325px;
+}
+
+.hero-search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
