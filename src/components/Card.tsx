@@ -21,7 +21,7 @@ type CardProps = {
   hero: Hero;
 };
 
-const Card: React.FC<CardProps> = ({ hero }) => {
+function Card({hero}: CardProps){
 
     const [showBio, setShowBio] = useState(false);
 
